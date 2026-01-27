@@ -45,7 +45,7 @@ La siguiente lista tiene como objetivo explicar qué funcionalidad de Pirania es
 * `/usr/libexec/rpcd/pirania` ubus de pirania (utilizada por el frontend web)
 * `/usr/share/rpcd/acl.d/pirania.json` Lista de control de accesos (ACL) para la API de pirania
 * `/etc/shared-state/publishers/shared-state-publish_vouchers` inserta la base de datos local de pines dentro de la base compartida `shared-state`
-* `/etc/shared-state/hooks/pirania/generate_vouchers` trae la base de pines actualizados y nuevos pines desde `shared-state` hacia la base de datos local
+* `/etc/shared-state/hooks/pirania-vouchers/generate_vouchers` trae la base de pines actualizados y nuevos pines desde `shared-state` hacia la base de datos local
 * `/usr/lib/lua/read_for_access` contiene la librería que usa `/usr/lib/lua/portal` para manejar el modo "leer para acceder" (es decir, sin vouchers)
 ### Captura de tráfico
 
