@@ -238,6 +238,21 @@ function vouchera.invalidate(id)
     return voucher
 end
 
+function vouchera.invalidate_all()
+    local function _update(v)
+        v.invalidation_date = os.time()
+    end
+    local total = 0
+    for _, voucher in pairs(vouchera.vouchers) do
+      modify_voucher_with_func(voucher.id, _update)
+      total = total + 1
+    end
+
+    portal.update_captive_portal(true)
+    hooks.run('db_change')
+    return total
+end
+
 --! Activate a voucher returning true or false depending on the status of the operation.
 function vouchera.activate(code, mac)
     local voucher = vouchera.is_activable(code)
