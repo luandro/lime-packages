@@ -244,8 +244,10 @@ function vouchera.invalidate_all()
     end
     local total = 0
     for _, voucher in pairs(vouchera.vouchers) do
-      modify_voucher_with_func(voucher.id, _update)
-      total = total + 1
+      if not voucher.is_invalidated() then
+        modify_voucher_with_func(voucher.id, _update)
+        total = total + 1
+      end
     end
 
     portal.update_captive_portal(true)

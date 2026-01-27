@@ -74,7 +74,7 @@ end
 
 captive_portal.invalidate_all = function()
   local total = vouchera.invalidate_all()
-  return nil, "'".. total .. "' vouchers was invalidated"
+  return true, "'".. total .. "' vouchers was invalidated"
 end
 
 captive_portal.add = function(name, duration_m, activation_deadline, unrestricted)
