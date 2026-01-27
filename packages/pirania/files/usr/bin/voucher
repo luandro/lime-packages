@@ -72,6 +72,11 @@ captive_portal.invalidate = function(id)
     return vouchera.invalidate(id)
 end
 
+captive_portal.invalidate_all = function()
+  local total = vouchera.invalidate_all()
+  return true, "'".. total .. "' vouchers was invalidated"
+end
+
 captive_portal.add = function(name, duration_m, activation_deadline, unrestricted)
     if type(duration_m) == "string" then
         duration_m = tonumber(duration_m)

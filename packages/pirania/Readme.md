@@ -85,6 +85,11 @@ Params:
 
 Ex: `voucher deactivate Qzt3WF`
 
+### `voucher invalidate_all
+
+To invalidate all vouchers and to propragate it by shared-state
+
+Ex: `voucher invalidate_all`
 
 ### `voucher remove_voucher`
 
@@ -136,7 +141,7 @@ files/
     /usr/share/rpcd/acl.d/pirania.json ACL for the ubus pirania API
 
     /etc/shared-state/publishers/shared-state-publish_vouchers inserts into shared-state the local voucher db
-    /etc/shared-state/hooks/pirania/generate_vouchers bring updated or new vouchers from the shared-state database into the local voucher db
+    /etc/shared-state/hooks/pirania-vouchers/generate_vouchers bring updated or new vouchers from the shared-state database into the local voucher db
 
     /usr/lib/lua/read_for_access contains the library used by
     /usr/lib/lua/portal to manage access  in read for access mode (aka without vouchers)
