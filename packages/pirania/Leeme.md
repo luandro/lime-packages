@@ -115,6 +115,10 @@ y en caso de éxito eres redirigido a `url_authenticated`, pues no se incluye la
 
 * `voucher deactivate ID`
 
+#### Invalidar todos pines y propagar en shared-state
+
+* `voucher invalidate_all`
+
 ### Sesión de ejemplo de una sesión donde se utiliza
 
 Aclaración: normalmente el paso de activación se realiza desde el navegador web por la persona
